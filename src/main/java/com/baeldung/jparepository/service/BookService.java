@@ -13,10 +13,11 @@ public class BookService {
     private BookRepository bookRepository;
 
     public List<Book> list() {
-        return bookRepository.findAll();
+        return bookRepository.findAllEntities();
     }
 
+
     public void insertBook(Book book) {
-        bookRepository.save(book);
+        bookRepository.insertEntity(book);
     }
 }
