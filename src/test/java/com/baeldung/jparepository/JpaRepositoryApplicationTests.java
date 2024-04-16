@@ -18,9 +18,9 @@ class JpaRepositoryApplicationTests {
 
 	@BeforeEach
 	void insertBooksIntoDatabase() {
-		bookService.insertBook(new Book(1L, "Altoriu sesely"));
-		bookService.insertBook(new Book(2L, "Dievu miskas"));
-		bookService.insertBook(new Book(3L, "Simtas metu vienatves"));
+		bookService.insertBook(new Book("Altorių šėšėly"));
+		bookService.insertBook(new Book("Dievų miškas"));
+		bookService.insertBook(new Book("Simtas metu vienatves"));
 	}
 
 	@Test

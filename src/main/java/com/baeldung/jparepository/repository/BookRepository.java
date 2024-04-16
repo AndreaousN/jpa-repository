@@ -20,7 +20,7 @@ public interface BookRepository extends JpaRepository<Book, Long> {
     @Modifying
     @Transactional
     // b.id ir b.name yra entičio lenteles vietos. :#{#book.id}, :#{#book.name prieina prie book objekto reiksmiu.
-    @Query("insert into Book b (b.id, b.name) values (:#{#book.id}, :#{#book.name})")
+    @Query("insert into Book b (b.name) values (:#{#book.name})")
     void insertEntity(@Param("book") Book book);
 
     @Query("select b from Book b")
