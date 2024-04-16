@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+// po JpaRepository pirma eina enticio pavadinimas (Book), Long atitinka id klase.
 @Repository
 public interface BookRepository extends JpaRepository<Book, Long> {
     // @Modifying - nurodo, kad metodas atliks įrašymo į duomenų bazę operaciją,

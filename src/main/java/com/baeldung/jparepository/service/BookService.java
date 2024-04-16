@@ -16,7 +16,6 @@ public class BookService {
         return bookRepository.findAllEntities();
     }
 
-
     public void insertBook(Book book) {
         bookRepository.insertEntity(book);
     }

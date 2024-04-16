@@ -24,9 +24,16 @@ class JpaRepositoryApplicationTests {
 	}
 
 	@Test
-	void whenApplicationStarts_thenHibernateCreatesInitialRecords() {
+	void verifyBooksInDB() {
 		List<Book> books = bookService.list();
-
+		printBooks(books);
 		Assertions.assertEquals(books.size(), 3);
+	}
+
+	void printBooks(List<Book> list) {
+		System.out.println("Knygu sarasas:");
+		for (Book book : list) {
+			System.out.println(book);
+		}
 	}
 }
