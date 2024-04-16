@@ -27,7 +27,7 @@ class JpaRepositoryApplicationTests {
 	void verifyBooksInDB() {
 		List<Book> books = bookService.list();
 		printBooks(books);
-		Assertions.assertEquals(books.size(), 3);
+		Assertions.assertEquals(books.size(), 6);
 	}
 
 	void printBooks(List<Book> list) {
